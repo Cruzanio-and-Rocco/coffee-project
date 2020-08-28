@@ -66,7 +66,7 @@ function findForUser() {
     var userInput = document.getElementById('userSearch')
     var userCoffee = [];
     coffees.forEach(function (coffee, i) {
-        if (userInput.value === coffees[i].name) {
+        if (userInput.value.toLowerCase() === coffees[i].name.toLowerCase()) {
             userCoffee.push(coffees[i].name);
             div.innerHTML = renderCoffee(coffees[i])
         } else {
@@ -74,17 +74,26 @@ function findForUser() {
         }
     });
 }
+function letsSearch() {
+    if (userInput.keyCode === 16) {
 
-// var bigSelect = document.querySelector('.options')
-// bigSelect.addEventListener('change', (event) => {
-//     if(`${event.target.value}` === '5') {
-//         map.setZoom(5)
-//     }
-//     if(`${event.target.value}` === '15') {
-//         map.setZoom(15)
-//     }
-//     if(`${event.target.value}` === '20') {
-//         map.setZoom(20)
-//     }
-// });
+    }else{
+        letSearch.unshift(userInput.value);
+        console.log(letSearch)
+    }
 
+}
+var trashSearch = []
+var letSearch = [];
+var userInput = document.getElementById('userSearch')
+var keyUp = userInput.addEventListener('keyup', letsSearch);
+//
+// function shiftKey() {
+//     if(event.shiftKey === true) {
+//
+//     }
+// }
+
+
+
+// `${event.target.value}`
