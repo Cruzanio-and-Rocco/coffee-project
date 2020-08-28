@@ -55,7 +55,36 @@ var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var searchButton = document.getElementById('searchButton');
 
+searchButton.addEventListener('click', findForUser)
+
 div.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+function findForUser() {
+    var userInput = document.getElementById('userSearch')
+    var userCoffee = [];
+    coffees.forEach(function (coffee, i) {
+        if (userInput.value === coffees[i].name) {
+            userCoffee.push(coffees[i].name);
+            div.innerHTML = renderCoffee(coffees[i])
+        } else {
+
+        }
+    });
+}
+
+// var bigSelect = document.querySelector('.options')
+// bigSelect.addEventListener('change', (event) => {
+//     if(`${event.target.value}` === '5') {
+//         map.setZoom(5)
+//     }
+//     if(`${event.target.value}` === '15') {
+//         map.setZoom(15)
+//     }
+//     if(`${event.target.value}` === '20') {
+//         map.setZoom(20)
+//     }
+// });
 
