@@ -10,6 +10,8 @@
     <h2>Test</h2>
 
     <form>
+        <input type="text" id="userSearch" placeholder="Enter Coffee Here">
+        <button type="button" id="searchButton">Search</button>
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
@@ -19,16 +21,8 @@
         <input id="submit" type="submit" />
     </form>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+
+    <div id="coffees"></div>
 
     <script src="main.js"></script>
 
