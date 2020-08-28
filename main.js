@@ -66,34 +66,25 @@ function findForUser() {
     var userInput = document.getElementById('userSearch')
     var userCoffee = [];
     coffees.forEach(function (coffee, i) {
-        if (userInput.value.toLowerCase() === coffees[i].name.toLowerCase()) {
-            userCoffee.push(coffees[i].name);
-            div.innerHTML = renderCoffee(coffees[i])
+        if (coffees[i].name.toLowerCase().includes(userInput.value.toLowerCase())) {
+            userCoffee.push(coffees[i]);
+            div.innerHTML = renderCoffees(userCoffee)
         } else {
-
+            // userInput.value.toLowerCase() === coffees[i].name.toLowerCase()
         }
     });
 }
 function letsSearch() {
-    if (userInput.keyCode === 16) {
-
-    }else{
-        letSearch.unshift(userInput.value);
-        console.log(letSearch)
+    coffees.forEach(function (coffee, i) {
+    if (coffees[i].name.toLowerCase().startsWith(userInput.value.toLowerCase())) {
+        letSearch.push(coffees[i])
+        div.innerHTML = renderCoffees(letSearch)
     }
+});
+
 
 }
 var trashSearch = []
 var letSearch = [];
 var userInput = document.getElementById('userSearch')
 var keyUp = userInput.addEventListener('keyup', letsSearch);
-//
-// function shiftKey() {
-//     if(event.shiftKey === true) {
-//
-//     }
-// }
-
-
-
-// `${event.target.value}`
