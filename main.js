@@ -81,7 +81,6 @@ function letsSearch() {
     coffees.forEach(function (coffee, i) {
         if (coffees[i].name.toLowerCase().startsWith(userInput.value.toLowerCase())) {
             letSearch.push(coffees[i])
-            console.log(letSearch)
             div.innerHTML = renderCoffees(letSearch)
         }
     })
