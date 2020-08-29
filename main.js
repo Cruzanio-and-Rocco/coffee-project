@@ -13,7 +13,7 @@ function renderCoffee(coffee) {
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = 0; i <= coffees.length - 1; i++) {
+    for (var i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -24,7 +24,7 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
+    coffees.forEach(function (coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
@@ -70,21 +70,23 @@ function findForUser() {
             userCoffee.push(coffees[i]);
             div.innerHTML = renderCoffees(userCoffee)
         } else {
-            // userInput.value.toLowerCase() === coffees[i].name.toLowerCase()
         }
     });
 }
+
+// userInput.value.toLowerCase() === coffees[i].name.toLowerCase()
+
 function letsSearch() {
+    var letSearch = []
     coffees.forEach(function (coffee, i) {
-    if (coffees[i].name.toLowerCase().startsWith(userInput.value.toLowerCase())) {
-        letSearch.push(coffees[i])
-        div.innerHTML = renderCoffees(letSearch)
-    }
-});
-
-
+        if (coffees[i].name.toLowerCase().startsWith(userInput.value.toLowerCase())) {
+            letSearch.push(coffees[i])
+            console.log(letSearch)
+            div.innerHTML = renderCoffees(letSearch)
+        }
+    })
 }
 var trashSearch = []
-var letSearch = [];
+
 var userInput = document.getElementById('userSearch')
-var keyUp = userInput.addEventListener('keyup', letsSearch);
+var keyUp = userInput.addEventListener('keyup', letsSearch)
