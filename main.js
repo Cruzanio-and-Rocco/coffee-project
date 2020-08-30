@@ -101,13 +101,29 @@ userInput.addEventListener('keyup', letsSearch)
 function addCoffeeToList() {
     var userCoffeeName = document.getElementById('userCoffee')
     var userRoastType = document.getElementById('user-roast-selection')
+
     coffees.push({
         id: Number(coffees.length + 1),
         name: userCoffeeName.value,
         roast: userRoastType.value,
     })
+    window.localStorage.setItem('coffees', JSON.stringify(coffees))
     div.innerHTML = renderCoffees(coffees)
+    var jCoffees = window.localStorage.getItem('coffees')
+    console.log('jCoffees', JSON.parse(jCoffees))
+    // coffeeStay()
 }
 
+
 addCoffeeButton.addEventListener('click', addCoffeeToList)
+//
+// function coffeeStay() {
+//     var sessionCoffee = document.getElementById('userCoffee')
+//     if (sessionStorage.getItem('userCoffee')) {
+//         sessionCoffee.value = sessionStorage.getItem('userCoffee');
+//     }
+//     sessionStorage.addEventListener('change', function () {
+//         sessionStorage.setItem('autosave', sessionCoffee.value)
+//     });
+// }
 
