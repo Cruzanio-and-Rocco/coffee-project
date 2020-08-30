@@ -2,47 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <h1>Coffee!</h1>
-    <h2>Test</h2>
-    <h2>Browse Our Selection</h2>
 
-    <form>
-        <input type="text" id="userSearch" placeholder="Browse...">
-        <button type="button" id="searchButton">Search</button>
-        <label for="roast-selection">Roast:</label>
-        <select id="roast-selection">
-            <option>All Roasts</option>
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+<div class="container-fluid">
+    <div class="row">
+        <h1 class="col text-center">Coffee!</h1>
+    </div>
+    <div class="row">
+        <div id="coffees" class="col-8"></div>
+        <div class="col-4">
+            <h2>Browse Our Selection</h2>
+            <form>
+                <input type="text" id="userSearch" placeholder="Browse...">
+                <button type="button" id="searchButton">Search</button>
+                <label for="roast-selection">Roast:</label>
+                <select id="roast-selection">
+                    <option>All Roasts</option>
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+                <input id="submit" type="submit"/>
+            </form>
 
 
-    <form>
-        <h2>Add Your Coffee</h2>
-        <label for="userCoffee">Coffee Name:</label>
-        <input type="text" id="userCoffee" placeholder="Enter Your Coffee Name">
-        <label for="user-roast-selection">Roast:</label>
-        <select id="user-roast-selection">
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
-        </select>
-        <button type="button" id="addCoffee">Add Coffee</button>
-    </form>
+            <form>
+                <h2>Add Your Coffee</h2>
+                <label for="userCoffee">Coffee Name:</label>
+                <input type="text" id="userCoffee" placeholder="Enter Your Coffee Name">
+                <label for="user-roast-selection">Roast:</label>
+                <select id="user-roast-selection">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+                <button type="button" id="addCoffee">Add Coffee</button>
+            </form>
+        </div>
 
+    </div>
+</div>
 
-    <div id="coffees"></div>
+<script src="main.js"></script>
+</div>
 
-    <script src="main.js"></script>
-
-<!--Rocco's comment-->
-<!--V's comment-->
 </body>
 </html>

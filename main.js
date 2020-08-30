@@ -107,16 +107,16 @@ function addCoffeeToList() {
         name: userCoffeeName.value,
         roast: userRoastType.value,
     })
-    window.localStorage.setItem('coffees', JSON.stringify(coffees))
+
     div.innerHTML = renderCoffees(coffees)
-    var jCoffees = window.localStorage.getItem('coffees')
-    console.log('jCoffees', JSON.parse(jCoffees))
+
     // coffeeStay()
 }
-
-
 addCoffeeButton.addEventListener('click', addCoffeeToList)
-//
+
+
+
+// local storage 1
 // function coffeeStay() {
 //     var sessionCoffee = document.getElementById('userCoffee')
 //     if (sessionStorage.getItem('userCoffee')) {
@@ -126,4 +126,7 @@ addCoffeeButton.addEventListener('click', addCoffeeToList)
 //         sessionStorage.setItem('autosave', sessionCoffee.value)
 //     });
 // }
-
+// local storage 2
+// var jCoffees = window.localStorage.getItem('coffees')
+// console.log('jCoffees', JSON.parse(jCoffees))
+// window.localStorage.setItem('coffees', JSON.stringify(coffees))
