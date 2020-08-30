@@ -94,7 +94,7 @@ function letsSearch() {
     })
 }
 
-var keyUp = userInput.addEventListener('keyup', letsSearch)
+userInput.addEventListener('keyup', letsSearch)
 
 
 
