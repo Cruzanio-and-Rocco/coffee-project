@@ -58,13 +58,13 @@ var div = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var searchButton = document.getElementById('searchButton');
+var userInput = document.getElementById('userSearch')
+var addCoffeeButton = document.getElementById('addCoffee')
 
-searchButton.addEventListener('click', findForUser)
 roastSelection.addEventListener('change', updateCoffees)
+submitButton.addEventListener('click', updateCoffees);
 
 div.innerHTML = renderCoffees(coffees);
-
-submitButton.addEventListener('click', updateCoffees);
 
 
 function findForUser() {
@@ -79,6 +79,9 @@ function findForUser() {
     });
 }
 
+searchButton.addEventListener('click', findForUser)
+
+
 // userInput.value.toLowerCase() === coffees[i].name.toLowerCase()
 
 function letsSearch() {
@@ -91,5 +94,20 @@ function letsSearch() {
     })
 }
 
-var userInput = document.getElementById('userSearch')
 var keyUp = userInput.addEventListener('keyup', letsSearch)
+
+
+
+function addCoffeeToList() {
+    var userCoffeeName = document.getElementById('userCoffee')
+    var userRoastType = document.getElementById('user-roast-selection')
+    coffees.push({
+        id: Number(coffees.length + 1),
+        name: userCoffeeName.value,
+        roast: userRoastType.value,
+    })
+    div.innerHTML = renderCoffees(coffees)
+}
+
+addCoffeeButton.addEventListener('click', addCoffeeToList)
+
