@@ -1,19 +1,27 @@
 "use strict"
 
 function renderCoffee(coffee) {
-var html = '<div class="card m-2 mx-3 text-align-center" style="width: 18rem;">';
-        html += '<img class="coffeeDog" src="img/coffeeDog.jpg" alt="Coffee Dog Image">';
-        html += '<div class="card-body text-center">';
+var html = '<div class="flip-card d-flex m-2 mx-3 text-align-center" style="width: 18rem;">';
+    html += "<div class='flip-card-inner'>"
+    html += "<div class='flip-card-front'>"
+    html += '<img class="coffeeDog" src="img/coffeeDog.jpg" alt="Coffee Dog Image" style="width:300px;height:300px;">';
+    html += "</div>"
+        // html += '<div class="flip-card text-center">';
+        html += "<div class='flip-card-back'>"
         html += '<h2 class="card-title">' + coffee.name + '</h2>';
     html += '<p class="card-text">' + coffee.roast + '</p>';
     html += '<a href="#" class="btn btn-primary">Coffee Wiki</a>'
     html += '</div>'
     html += '</div>'
-    // var html = '<div class="coffee row mx-2 my-2 align-items-center justify-content-center">';
-    // // html += '<td>' + coffee.id + '</td>';
-    // html += '<h2>' + coffee.name + '</h2>';
-    // html += '<p class="m-0 ml-1">' + coffee.roast + '</p>';
-    // html += '</div>';
+    html += '</div>'
+    // html += '</div>'
+
+    //     <h1>John Doe</h1>
+    // <p>Architect & Engineer</p>
+    // <p>We love that guy</p>
+    // </div>
+    // </div>
+    // </div>
 
     return html;
 }
