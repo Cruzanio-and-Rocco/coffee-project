@@ -1,10 +1,10 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee row mx-0 align-items-center">';
+    var html = '<div class="coffee row mx-2 align-items-center justify-content-center">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<h2>' + coffee.name + '</h2>';
-    html += '<p class="m-0">' + coffee.roast + '</p>';
+    html += '<p class="m-0 ml-1">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -62,7 +62,7 @@ var userInput = document.getElementById('userSearch')
 var addCoffeeButton = document.getElementById('addCoffee')
 
 roastSelection.addEventListener('change', updateCoffees)
-submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', updateCoffees);
 
 div.innerHTML = renderCoffees(coffees);
 

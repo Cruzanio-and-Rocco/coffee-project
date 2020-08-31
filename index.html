@@ -20,7 +20,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 
-
+<!--Puppy Background-->
 <div class="container cover">
     <div class="video-bg">
         <video autoplay muted loop class="puppiness">
@@ -29,38 +29,69 @@
             <source src="img/puppiness.ogv">
         </video>
     </div>
+
+<!--Title-->
     <div class="row">
         <h1 class="col text-center py-3 coffeeStyle">Coffee!...and one Good Boy!</h1>
     </div>
+    <hr>
     <div class="row">
-        <div id="coffees" class="col-8 text-center"></div>
-        <div class="col-4">
+
+<!-- Coffee List/Interface-->
+        <div id="coffees" class="col-7"></div>
+        <div class="col-5 justify-content-center align-items-center">
+
+<!--Browse Our Selection-->
             <form class="py-3">
-                <h2 class="coffeeStyle">Browse Our Selection</h2>
-                <input type="text" id="userSearch" placeholder="Browse..." class='m-1'>
-                <button type="button" id="searchButton" class="px-5">Search</button>
+                <h2 class="coffeeStyle text-center">Browse Our Selection:</h2>
                 <br>
-                <label for="roast-selection">Roast:</label>
-                <select id="roast-selection">
-                    <option>All Roasts</option>
-                    <option>Light</option>
-                    <option>Medium</option>
-                    <option>Dark</option>
-                </select>
-                <input id="submit" type="submit"/>
+                <div class="input-group mb-3 opacityC" >
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Search</span>
+                    </div>
+                    <input id="userSearch" type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" placeholder="Browse...">
+                </div>
+                <div class="input-group mb-3 opacityC">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="roast-selection">Roast</label>
+                    </div>
+                    <select class="custom-select" id="roast-selection">
+                        <option selected>All Roasts</option>
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option>Dark</option>
+                    </select>
+                </div>
+                <button type="button" id="searchButton" class="btn btn-info btn-sm btn-block">Search</button>
             </form>
 
+            <br>
+            <br>
+
+<!--Add Your Coffee-->
             <form class="py=3">
-                <h2 class="coffeeStyle">Add Your Coffee</h2>
-                <label for="userCoffee">Coffee Name:</label>
-                <input type="text" id="userCoffee" placeholder="Enter Your Coffee Name">
-                <label for="user-roast-selection">Roast:</label>
-                <select id="user-roast-selection">
-                    <option>Light</option>
-                    <option>Medium</option>
-                    <option>Dark</option>
-                </select>
-                <button type="button" id="addCoffee">Add Coffee</button>
+                <h2 class="coffeeStyle text-center">Add Your Coffee:</h2>
+                <br>
+                <div class="input-group mb-3 opacityC">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" for="userCoffee">Name</span>
+                    </div>
+                    <input id="userCoffee" type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" placeholder="Enter Your Coffee Name">
+                </div>
+                <div class="input-group mb-3 opacityC">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="user-roast-selection">Roast</label>
+                    </div>
+                    <select class="custom-select" id="user-roast-selection">
+                        <option selected>All Roasts</option>
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option>Dark</option>
+                    </select>
+                </div>
+                <button type="button" id="addCoffee" class="btn btn-info btn-sm btn-block">Add Coffee</button>
             </form>
         </div>
 
