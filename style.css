@@ -1,3 +1,6 @@
+body {
+    background-color: lightgrey;
+}
 .coffeeStyle {
     color: lightgrey;
     text-shadow: 0px 0px 5px purple ;
@@ -30,4 +33,16 @@ video {
 
 .btn {
     opacity: .9;
+}
+.card {
+    border: transparent;
+    background: transparent !important;
+    border-radius: 15px;
+}
+.coffeeDog {
+    border-radius: 15px;
+    opacity: .8;
+}
+.card-body {
+    background: transparent !important;
 }
