@@ -1,16 +1,16 @@
 "use strict"
 
 function renderCoffee(coffee) {
-var html = '<div class="flip-card d-flex m-2 mx-3 text-align-center" style="width: 18rem;">';
+var html = '<div class="flip-card d-flex m-2 mx-3 text-align-center " style="width: 10em;">';
     html += "<div class='flip-card-inner'>"
     html += "<div class='flip-card-front'>"
-    html += '<img class="coffeeDog" src="img/coffeeDog.jpg" alt="Coffee Dog Image" style="width:300px;height:300px;">';
+    html += '<img class="coffeeDog" src="img/coffeeDog.jpg" alt="Coffee Dog Image" style="width:160px;height:160px;">';
     html += "</div>"
         // html += '<div class="flip-card text-center">';
         html += "<div class='flip-card-back'>"
-        html += '<h2 class="card-title">' + coffee.name + '</h2>';
+        html += '<h2 class="card-title h2class">' + coffee.name + '</h2>';
     html += '<p class="card-text">' + coffee.roast + '</p>';
-    html += '<a href="#" class="btn btn-primary">Coffee Wiki</a>'
+    html += '<a href="#" class="btn btn-sm btn-primary">Coffee Wiki</a>'
     html += '</div>'
     html += '</div>'
     html += '</div>'
