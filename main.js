@@ -1,27 +1,19 @@
 "use strict"
 
 function renderCoffee(coffee) {
-var html = '<div class="flip-card d-flex m-2 mx-3 text-align-center " style="width: 10em;">';
+    var html = '<div class="flip-card d-flex m-2 mx-3 text-align-center " style="width: 10em;">';
     html += "<div class='flip-card-inner'>"
     html += "<div class='flip-card-front'>"
     html += '<img class="coffeeDog" src="img/coffeeDog.jpg" alt="Coffee Dog Image" style="width:160px;height:160px;">';
     html += "</div>"
-        // html += '<div class="flip-card text-center">';
-        html += "<div class='flip-card-back'>"
-        html += '<h2 class="card-title h2class">' + coffee.name + '</h2>';
+    html += "<div class='flip-card-back'>"
+    html += '<h2 class="card-title h2class">' + coffee.name + '</h2>';
     html += '<p class="card-text">' + coffee.roast + '</p>';
     html += '<a href="#" class="btn btn-sm btn-primary">Coffee Wiki</a>'
     html += '</div>'
     html += '</div>'
     html += '</div>'
-    // html += '</div>'
 
-    //     <h1>John Doe</h1>
-    // <p>Architect & Engineer</p>
-    // <p>We love that guy</p>
-    // </div>
-    // </div>
-    // </div>
 
     return html;
 }
@@ -113,7 +105,6 @@ function letsSearch() {
 userInput.addEventListener('keyup', letsSearch)
 
 
-
 function addCoffeeToList() {
     var userCoffeeName = document.getElementById('userCoffee')
     var userRoastType = document.getElementById('user-roast-selection')
@@ -128,8 +119,8 @@ function addCoffeeToList() {
 
     // coffeeStay()
 }
-addCoffeeButton.addEventListener('click', addCoffeeToList)
 
+addCoffeeButton.addEventListener('click', addCoffeeToList)
 
 
 // local storage 1
@@ -142,6 +133,7 @@ addCoffeeButton.addEventListener('click', addCoffeeToList)
 //         sessionStorage.setItem('autosave', sessionCoffee.value)
 //     });
 // }
+
 // local storage 2
 // var jCoffees = window.localStorage.getItem('coffees')
 // console.log('jCoffees', JSON.parse(jCoffees))
