@@ -41,6 +41,7 @@ video {
 }
 .coffeeDog {
     border-radius: 15px;
+    box-shadow: 5px 5px 5px black;
     opacity: .8;
 }
 .card-body {

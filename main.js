@@ -1,7 +1,7 @@
 "use strict"
 
 function renderCoffee(coffee) {
-var html = '<div class="card m-2 text-align-center" style="width: 18rem;">';
+var html = '<div class="card m-2 mx-3 text-align-center" style="width: 18rem;">';
         html += '<img class="coffeeDog" src="img/coffeeDog.jpg" alt="Coffee Dog Image">';
         html += '<div class="card-body text-center">';
         html += '<h2 class="card-title">' + coffee.name + '</h2>';
