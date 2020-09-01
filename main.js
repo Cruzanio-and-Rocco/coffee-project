@@ -121,6 +121,8 @@ function addCoffeeToList() {
 }
 addCoffeeButton.addEventListener('click', addCoffeeToList)
 
+div.innerHTML = renderCoffees(coffees);
+
 var buttonR = document.getElementsByClassName('rB')[0];
 
 var postRemoveBtn = [];
@@ -140,6 +142,6 @@ var coffeeDeterminer = function() {
 //     var afterRemoveCoffeeList = coffees.filter()
 //
 
-div.innerHTML = renderCoffees(coffees);
+
 
 buttonR.addEventListener('click', coffeeDeterminer)
