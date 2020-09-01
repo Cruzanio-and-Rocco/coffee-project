@@ -9,7 +9,7 @@ function renderCoffee(coffee) {
     html += "<div class='flip-card-back'>"
     html += '<h2 class="card-title h2class">' + coffee.name + '</h2>';
     html += '<p class="card-text">' + coffee.roast + '</p>';
-    html += '<a href="#" class="btn btn-sm btn-primary">Coffee Wiki</a>'
+    html += '<button class="btn btn-sm btn-danger rB">Remove</button>'
     html += '</div>'
     html += '</div>'
     html += '</div>'
@@ -61,18 +61,19 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'Dark'},
     {id: 14, name: 'French', roast: 'Dark'},
 ];
-
 var div = document.querySelector('#coffees');
+
+
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var searchButton = document.getElementById('searchButton');
 var userInput = document.getElementById('userSearch')
 var addCoffeeButton = document.getElementById('addCoffee')
-
+var removeButton =
 roastSelection.addEventListener('change', updateCoffees)
 // submitButton.addEventListener('click', updateCoffees);
 
-div.innerHTML = renderCoffees(coffees);
+
 
 
 function findForUser() {
@@ -117,24 +118,28 @@ function addCoffeeToList() {
 
     div.innerHTML = renderCoffees(coffees)
 
-    // coffeeStay()
 }
-
 addCoffeeButton.addEventListener('click', addCoffeeToList)
 
+var buttonR = document.getElementsByClassName('rB')[0];
 
-// local storage 1
-// function coffeeStay() {
-//     var sessionCoffee = document.getElementById('userCoffee')
-//     if (sessionStorage.getItem('userCoffee')) {
-//         sessionCoffee.value = sessionStorage.getItem('userCoffee');
-//     }
-//     sessionStorage.addEventListener('change', function () {
-//         sessionStorage.setItem('autosave', sessionCoffee.value)
-//     });
-// }
+var postRemoveBtn = [];
+var coffeeDeterminer = function() {
+    var nameC = buttonR.name
+    coffees.forEach(function(coffee ){
+        for (var i=0; i <= coffees.length - 1; i++)
+        if (coffees[i].name !== nameC){
+            postRemoveBtn.push(coffee);
+        }
+        div.innerHTML = renderCoffees(postRemoveBtn);
+    });
+    console.log(coffeeDeterminer(postRemoveBtn));
+}
+//
+// function removeCoffee(){
+//     var afterRemoveCoffeeList = coffees.filter()
+//
 
-// local storage 2
-// var jCoffees = window.localStorage.getItem('coffees')
-// console.log('jCoffees', JSON.parse(jCoffees))
-// window.localStorage.setItem('coffees', JSON.stringify(coffees))
+div.innerHTML = renderCoffees(coffees);
+
+buttonR.addEventListener('click', coffeeDeterminer)
