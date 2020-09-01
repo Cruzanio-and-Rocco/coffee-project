@@ -22,118 +22,121 @@
 
 <!--Puppy Background-->
 <div class="container cover">
-<!--    <div class="video-bg">-->
-<!--&lt;!&ndash;        <video autoplay muted loop class="puppiness">&ndash;&gt;-->
-<!--&lt;!&ndash;            <source src="img/puppiness.webm">&ndash;&gt;-->
-<!--&lt;!&ndash;            <source src="img/puppiness.mp4">&ndash;&gt;-->
-<!--&lt;!&ndash;            <source src="img/puppiness.ogv">&ndash;&gt;-->
-<!--&lt;!&ndash;        </video>&ndash;&gt;-->
-<!--    </div>-->
+<!--        <div class="video-bg">-->
+<!--            <video autoplay muted loop class="puppiness">-->
+<!--                <source src="img/puppiness.webm">-->
+<!--                <source src="img/puppiness.mp4">-->
+<!--                <source src="img/puppiness.ogv">-->
+<!--            </video>-->
+<!--        </div>-->
 
-<!--Title-->
+    <!--Title-->
     <div class="row">
         <h1 class="col text-center py-3 coffeeStyle">Off The Chain Coffee!</h1>
     </div>
-    <div class="row container-fluid">
-        <div id="demo" class="carousel slide" data-ride="carousel">
+    <div class="container-fluid">
+        <div class="row container-fluid justify-content-center">
+            <div id="demo" class="carousel slide" data-ride="carousel">
 
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
 
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/yawn.jpg" alt="yawn god" width="1100" height="500">
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/yawn.jpg" alt="yawn god" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/flan.jpg" alt="snitzel" width="1100" height="500">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/hdog.jpeg" alt="shirt dog" width="1100" height="500">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="img/wiwi.jpg" alt="snitzel" width="1100" height="500">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/hdog.jpeg" alt="shirt dog" width="1100" height="500">
-                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
             </div>
-
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-
         </div>
     </div>
+    <br>
     <div class="row">
-            <!--Browse Our Selection-->
-            <form class="col-6 py-3 px-5">
-                <h2 class="coffeeStyle text-center">Browse Our Selection:</h2>
-                <br>
-                <div class="input-group mb-3 opacityC" >
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Search</span>
-                    </div>
-                    <input id="userSearch" type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default" placeholder="Browse...">
+        <!--Browse Our Selection-->
+        <form class="col-6 py-3 px-5">
+            <h2 class="coffeeStyle text-center">Browse Our Selection:</h2>
+            <br>
+            <div class="input-group mb-3 opacityC">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Search</span>
                 </div>
-                <div class="input-group mb-3 opacityC">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="roast-selection">Roast</label>
-                    </div>
-                    <select class="custom-select" id="roast-selection">
-                        <option selected>All Roasts</option>
-                        <option>Light</option>
-                        <option>Medium</option>
-                        <option>Dark</option>
-                    </select>
+                <input id="userSearch" type="text" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-default" placeholder="Browse...">
+            </div>
+            <div class="input-group mb-3 opacityC">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="roast-selection">Roast</label>
                 </div>
-                <button type="button" id="searchButton" class="btn btn-info btn-sm btn-block">Search</button>
-            </form>
+                <select class="custom-select" id="roast-selection">
+                    <option selected>All Roasts</option>
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+            </div>
+            <button type="button" id="searchButton" class="btn btn-info btn-sm btn-block">Search</button>
+        </form>
 
-            <!--Add Your Coffee-->
-            <form class="col-6 py-3 px-5">
-                <h2 class="coffeeStyle text-center">Add Your Coffee:</h2>
-                <br>
-                <div class="input-group mb-3 opacityC">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" for="userCoffee">Name</span>
-                    </div>
-                    <input id="userCoffee" type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default" placeholder="Enter Your Coffee Name">
+        <!--Add Your Coffee-->
+        <form class="col-6 py-3 px-5">
+            <h2 class="coffeeStyle text-center">Add Your Coffee:</h2>
+            <br>
+            <div class="input-group mb-3 opacityC">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" for="userCoffee">Name</span>
                 </div>
-                <div class="input-group mb-3 opacityC">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text" for="user-roast-selection">Roast</label>
-                    </div>
-                    <select class="custom-select" id="user-roast-selection">
-                        <option>Light</option>
-                        <option>Medium</option>
-                        <option>Dark</option>
-                    </select>
+                <input id="userCoffee" type="text" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-default" placeholder="Enter Your Coffee Name">
+            </div>
+            <div class="input-group mb-3 opacityC">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="user-roast-selection">Roast</label>
                 </div>
-                <button type="button" id="addCoffee" class="btn btn-info btn-sm btn-block">Add Coffee</button>
-            </form>
+                <select class="custom-select" id="user-roast-selection">
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
+            </div>
+            <button type="button" id="addCoffee" class="btn btn-info btn-sm btn-block">Add Coffee</button>
+        </form>
     </div>
 
     <div class="row">
-<!-- Coffee List/Interface-->
+        <!-- Coffee List/Interface-->
         <div id="coffees" class="col d-flex flex-wrap justify-content-center"></div>
     </div>
-<!--    <div class="flip-card">-->
-<!--        <div class="flip-card-inner">-->
-<!--            <div class="flip-card-front">-->
-<!--                <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">-->
-<!--            </div>-->
-<!--            <div class="flip-card-back">-->
-<!--                <h1>John Doe</h1>-->
-<!--                <p>Architect & Engineer</p>-->
-<!--                <p>We love that guy</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+    <!--    <div class="flip-card">-->
+    <!--        <div class="flip-card-inner">-->
+    <!--            <div class="flip-card-front">-->
+    <!--                <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">-->
+    <!--            </div>-->
+    <!--            <div class="flip-card-back">-->
+    <!--                <h1>John Doe</h1>-->
+    <!--                <p>Architect & Engineer</p>-->
+    <!--                <p>We love that guy</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
 
 </div>
 </div>
